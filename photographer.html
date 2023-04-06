@@ -2,36 +2,84 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
     <title>Fisheye - photographe </title>
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
     </header>
     <main id="main">
+
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button" onclick="displayModal()" tabindex="0">Contactez-moi</button>
       </div>
+
+      <div id="filter_menu">        
+        <p>Trier par</p>
+        <select name="filtre" id="filter" onchange="changeFilter(event)" tabindex="0">
+          <option value="popularité">Popularité</option>
+          <option value="date">Date</option>
+          <option value="titre">Titre</option>
+        </select>
+
+      </div>
+
     </main>
+
+    <div id="lightboxModal" class="lighbox_modal">
+      <span class="close cursor" onclick="closeModalMedia()">&times;</span>
+      <div id="lightbox-content" class="modal-content">
+    
+        <!-- Avant/Après  -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      </div>
+    </div>
+
     <div id="contact_modal">
 			<div class="modal">
 				<header>
-          <h2>Contactez-moi</h2>
+          <h2 id="contact-me" tabindex="0">Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form>
 					<div>
-						<label>Prénom</label>
-						<input />
+						<label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" tabindex="1" />
+
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" tabindex="1" />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" tabindex="1" />
+
+            <label for="message">Votre message</label>
+            <input type="text" name="message" id="message" tabindex="1" />
+
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button" id="send" tabindex="0">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <script src="/scripts/pages/photographer.js"></script>
+
+    <div id="general_info">
+      <p class="likesNumberTotal">
+        <span>0</span> <i class="fa-solid fa-heart"></i>
+      </p>
+    </div>
+    <script src="/scripts/utils/lightbox.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/factories/media.js"></script>
+    <script src="/scripts/factories/photographer.js"></script>
+    <script src="/scripts/factories/lightboxfactory.js"></script>
+    <script src="/scripts/pages/photographer.js"></script>
   </body>
 </html>

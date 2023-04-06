@@ -1,0 +1,114 @@
+.images_list > .images {
+    padding: 0 8px;
+  }
+  
+  .images_list:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .images_list {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .images {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+  }
+  
+  /* The Modal (background) */
+  .lighbox_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    padding-left: 400px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+/*     margin: auto; */
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #901C1C;
+    position: absolute;
+    top: 70px;
+    right: 650px;
+    font-size: 65px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #901C1C;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    align-items: center;
+  }
+
+  .mySlides img, .mySlides video {
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mySlides p {
+    color: #901C1C;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #901C1C;
+    font-weight: bold;
+    font-size: 65px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .prev {
+    left: -80px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: -80px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  /* .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  } */
