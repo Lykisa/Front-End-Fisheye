@@ -1,11 +1,141 @@
-#contact_modal {
-    display: none;
-}
+
 
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photograph-header h2{
+    color : #D3573C
+}
+
+.photograph-header p {
+    color: #901C1C;
+}
+
+.photograph-header .p2 {
+    color: #312E2E;
+}
+
+.photograph-header img  {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#filter_menu {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+
+#filter {
+    color: white;
+    background-color: #901C1C;
+    border: none;
+    width: 100px;
+}
+
+#filter option {
+    border-bottom: white;
+}
+
+.media_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 100px;
+}
+
+.media_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media_section img {
+    padding-top: 50px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.media_section video {
+    padding-top: 50px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.mediaInfoDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    vertical-align : bottom;
+}
+
+.mediaInfoDiv p, span {
+    color: #901C1C;
+}
+
+.likesInfo {
+    display: flex;
+}
+
+.likesHeart {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #901C1C;
+    margin-top: 18px;
+    padding-left: 5px;
+}
+
+.likesInfo p {
+    font-size: 16px;
+}
+
+#general_info {
+    width: 300px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #DB8876;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding : 0 20px;
+    font-weight: bold;
+}
+
+#general_info span {
+    color: black;
+}
+
+#contact_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(82, 82, 82, 0.8);
+    
 }
 
 .contact_button {
@@ -45,7 +175,8 @@
 .modal header h2 {
     font-size: 64px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
+    padding-top: 30px;
 }
 
 form {
@@ -53,6 +184,7 @@ form {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 70px;
 }
 
 form label {
@@ -73,4 +205,12 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+    font-size: 24px;
+}
+
+.media_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 70px;
+    margin-top: 100px;
 }

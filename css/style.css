@@ -44,7 +44,35 @@ h1 {
     font-size: 36px;
 }
 
-.photographer_section article img {
+.photographer_section article img  {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.photographer_section article a {
+    height: 200px;
+    width: 200px;
+}
+
+.photographer_section img {
+    object-fit : cover;
+}
+
+.photographer_section p {
+    color: #901C1C;
+    font-size: 12px;
+}
+
+.photographer_section .p2 {
+    color: black;
+}
+
+.photographer_section .p3 {
+    color: #525252;
+}
+
+.photographer_section a {
     height: 200px;
     width: 200px;
 }
