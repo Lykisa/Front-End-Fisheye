@@ -53,6 +53,7 @@ async function displayPhotographer (photographer) {
 
   const img = document.createElement('img');
   img.setAttribute('src', picture);
+  img.setAttribute('alt', photographer.name);
 
   photographerHeader.prepend(photographerInfo);
   photographerInfo.appendChild(h2);

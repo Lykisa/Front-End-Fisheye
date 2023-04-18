@@ -63,13 +63,13 @@ function mediaFactory (data) {
     const likesNumber = document.createElement('p');
     likesNumber.classList.add('likesNumber');
     likesNumber.textContent = likes;
+    likesNumber.setAttribute('aria-label', likes + ' ' + 'likes');
 
     const likesHeart = document.createElement('i');
     likesHeart.classList.add('likesHeart');
     likesHeart.classList.add('fa-regular');
     likesHeart.classList.add('fa-heart');
     likesHeart.setAttribute('tabindex', '0');
-    likesHeart.setAttribute('aria-label', likes + ' ' + 'likes');
 
     const totalLikes = document.querySelector('.likesNumberTotal span');
     const newTotalLikes = parseInt(totalLikes.innerHTML) + parseInt(likes);
