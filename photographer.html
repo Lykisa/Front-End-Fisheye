@@ -11,22 +11,22 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
+      <a href="index.html" alt="Logo du site Fisheye" aria-label="Page d'accueil">
         <img src="assets/images/logo.png" class="logo" />
       </a>
     </header>
     <main id="main">
 
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()" tabindex="0">Contactez-moi</button>
+        <button class="contact_button" aria-label="Contact" onclick="displayModal()" tabindex="0">Contactez-moi</button>
       </div>
 
       <div id="filter_menu">        
         <p>Trier par</p>
-        <select name="filtre" id="filter" onchange="changeFilter(event)" tabindex="0">
-          <option value="popularité">Popularité</option>
-          <option value="date">Date</option>
-          <option value="titre">Titre</option>
+        <select name="filtre" id="filter" aria-label="Filtre" onchange="changeFilter(event)" tabindex="0">
+          <option value="popularité" aria-label="Popularité">Popularité</option>
+          <option value="date" aria-label="Date">Date</option>
+          <option value="titre" aria-label="Titre">Titre</option>
         </select>
 
       </div>
@@ -34,24 +34,24 @@
     </main>
 
     <div id="lightboxModal" class="lighbox_modal">
-      <span class="close cursor" onclick="closeModalMedia()">&times;</span>
+      <span class="close cursor" aria-label="Fermer" onclick="closeModalMedia()">&times;</span>
       <div id="lightbox-content" class="modal-content">
     
         <!-- Avant/Après  -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" aria-label="Précedent" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" aria-label="Suivant" onclick="plusSlides(1)">&#10095;</a>
     
       </div>
     </div>
 
-    <div id="contact_modal">
+    <div id="contact_modal" aria-label="Formulaire de contact">
 			<div class="modal">
 				<header>
           <h2 id="contact-me" tabindex="0">Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" alt="Icone fermeture du formalaire de contact" aria-label="Fermer" onclick="closeModal()" />
         </header>
 				<form>
-					<div>
+					<div aria-label="Entrées du formulaire à compléter">
 						<label for="prenom">Prénom</label>
             <input type="text" name="prenom" id="prenom" tabindex="1" />
 

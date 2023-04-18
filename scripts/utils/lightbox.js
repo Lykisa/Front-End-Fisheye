@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // Open the Modal
 function openModal () {
@@ -9,8 +10,8 @@ function closeModalMedia () {
   document.getElementById('lightboxModal').style.display = 'none';
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
+/* let slideIndex = 1;
+showSlides(slideIndex); */
 
 // Next/previous controls
 function plusSlides (n) {

@@ -14,6 +14,7 @@ function lightboxFactory (data) {
       const img = document.createElement('img');
       img.setAttribute('src', picture);
       img.setAttribute('alt', title);
+      img.setAttribute('aria-label', title);
       img.setAttribute('tabindex', '0');
       slide.appendChild(img);
     } else {
@@ -21,6 +22,7 @@ function lightboxFactory (data) {
       const sourceFile = document.createElement('source');
       sourceFile.setAttribute('src', videos);
       videoFile.setAttribute('controls', '');
+      videoFile.setAttribute('aria-label', title);
       videoFile.setAttribute('tabindex', '0');
       videoFile.appendChild(sourceFile);
       slide.appendChild(videoFile);

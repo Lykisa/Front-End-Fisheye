@@ -14,6 +14,7 @@ function mediaFactory (data) {
       const img = document.createElement('img');
       img.setAttribute('src', picture);
       img.setAttribute('alt', title);
+      img.setAttribute('aria-label', title);
       img.setAttribute('tabindex', '0');
       img.classList.add('media');
       article.appendChild(img);
@@ -34,6 +35,7 @@ function mediaFactory (data) {
       sourceFile.setAttribute('src', videos);
       videoFile.classList.add('media');
       videoFile.setAttribute('tabindex', '0');
+      videoFile.setAttribute('aria-label', title);
       videoFile.appendChild(sourceFile);
       article.appendChild(videoFile);
       videoFile.addEventListener('click', () => {
@@ -67,10 +69,12 @@ function mediaFactory (data) {
     likesHeart.classList.add('fa-regular');
     likesHeart.classList.add('fa-heart');
     likesHeart.setAttribute('tabindex', '0');
+    likesHeart.setAttribute('aria-label', likes + ' ' + 'likes');
 
     const totalLikes = document.querySelector('.likesNumberTotal span');
     const newTotalLikes = parseInt(totalLikes.innerHTML) + parseInt(likes);
     totalLikes.innerHTML = newTotalLikes;
+    totalLikes.setAttribute('aria-label', newTotalLikes);
 
     likesHeart.addEventListener('click', manageLike);
     likesHeart.addEventListener('keydown', function (event) {
